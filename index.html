@@ -52,6 +52,17 @@
             overflow: hidden;
             opacity: 0.4;
         }
+        /* Estilo para el logo */
+        .logo-img {
+            max-width: 120px;
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(255, 107, 0, 0.3));
+        }
+        @media (min-width: 768px) {
+            .logo-img {
+                max-width: 160px;
+            }
+        }
     </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-4 md:p-8">
@@ -64,10 +75,11 @@
 
     <main class="relative z-10 max-w-2xl w-full bg-neutral-900/90 backdrop-blur-xl border border-neutral-800 p-6 md:p-12 rounded-[2.5rem] glow fade-in">
         
-        <!-- Encabezado con lógica de género -->
+        <!-- Encabezado con LOGO y Lógica de Género -->
         <div class="text-center mb-8 md:mb-10">
-            <div class="inline-block p-2.5 border-2 border-[#FF6B00] rounded-full mb-5 md:mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="md:w-12 md:h-12"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            <div class="flex justify-center mb-6">
+                <!-- Aquí integramos el Logo Naranja -->
+                <img src="Logo Naranja.jpg" alt="Logo Conquistadores Palermo" class="logo-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/150?text=Logo+Palermo';">
             </div>
             <h1 id="userName" class="text-2xl md:text-4xl font-epic font-bold mb-2 uppercase tracking-tighter text-white px-2">
                 CONQUISTADOR
@@ -139,7 +151,6 @@
     </main>
 
     <script>
-        // Lógica de personalización dinámica
         window.onload = function() {
             const params = new URLSearchParams(window.location.search);
             const nombre = params.get('nombre');
@@ -149,11 +160,9 @@
                 document.getElementById('userName').innerText = nombre.toUpperCase();
             }
 
-            // Si el género es femenino (f), ajustamos los textos
             if (genero === 'f') {
                 document.getElementById('genderText').innerText = "FUISTE FORMADA PARA ESTE MOMENTO";
                 document.getElementById('callToActionText').innerText = "¿ESTÁS LISTA PARA EL LLAMADO?";
-                // Si no hay nombre, ponemos el genérico femenino
                 if (!nombre) {
                     document.getElementById('userName').innerText = "CONQUISTADORA";
                 }
@@ -164,8 +173,8 @@
             const nombre = document.getElementById('userName').innerText;
             const mensaje = `Hola Director, soy ${nombre}. He recibido el llamado. Confirmo mi asistencia para el 11 de abril. ¿Cuál es mi hora asignada?`;
             
-            // Reemplaza con tu número real de WhatsApp (formato internacional sin el +)
-            const phone = "573102881812"; 
+            // Reemplaza con tu número real de WhatsApp
+            const phone = "573001234567"; 
             const url = `https://wa.me/${phone}?text=${encodeURIComponent(mensaje)}`;
             window.open(url, '_blank');
         }
