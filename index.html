@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Misión Palermo 2026 | El Llamado</title>
     
-    <!-- Metaetiquetas para Previsualización en WhatsApp (Requiere hosting) -->
+    <!-- Metaetiquetas para Previsualización -->
     <meta property="og:title" content="Misión Palermo 2026 | El Llamado">
-    <meta property="og:description" content="Fuiste formado para este momento. Tu lugar en el frente de batalla sigue reservado.">
+    <meta property="og:description" content="Fuiste formado/a para este momento. Tu lugar en el frente de batalla sigue reservado.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://tu-url-aqui.com/logo-preview.jpg"> <!-- Reemplazar con URL real del logo -->
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
@@ -23,7 +22,6 @@
             color: white;
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
-            /* Evita el scroll horizontal molesto en móviles */
             width: 100%;
             position: relative;
         }
@@ -33,9 +31,6 @@
         }
         .glow {
             box-shadow: 0 0 30px rgba(255, 107, 0, 0.15);
-        }
-        .border-orange {
-            border-color: var(--palermo-orange);
         }
         .bg-orange {
             background-color: var(--palermo-orange);
@@ -47,7 +42,6 @@
             from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        /* Mejorar el degradado de fondo en móviles */
         .bg-glow {
             position: fixed;
             width: 100vw;
@@ -62,7 +56,7 @@
 </head>
 <body class="min-h-screen flex items-center justify-center p-4 md:p-8">
 
-    <!-- Fondo decorativo optimizado -->
+    <!-- Fondo dinámico -->
     <div class="bg-glow">
         <div class="absolute top-[-10%] left-[-10%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-orange-600 rounded-full blur-[80px] md:blur-[120px]"></div>
         <div class="absolute bottom-[-10%] right-[-10%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-orange-900 rounded-full blur-[80px] md:blur-[120px]"></div>
@@ -70,19 +64,18 @@
 
     <main class="relative z-10 max-w-2xl w-full bg-neutral-900/90 backdrop-blur-xl border border-neutral-800 p-6 md:p-12 rounded-[2.5rem] glow fade-in">
         
-        <!-- Header / Logo Area -->
+        <!-- Encabezado con lógica de género -->
         <div class="text-center mb-8 md:mb-10">
-            <div class="inline-block p-2.5 border-2 border-orange rounded-full mb-5 md:mb-6">
-                <!-- Icono de escudo -->
+            <div class="inline-block p-2.5 border-2 border-[#FF6B00] rounded-full mb-5 md:mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="md:w-12 md:h-12"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
             </div>
             <h1 id="userName" class="text-2xl md:text-4xl font-epic font-bold mb-2 uppercase tracking-tighter text-white px-2">
-                ALEJANDRO VALDERRAMA
+                CONQUISTADOR
             </h1>
-            <p class="text-orange-500 font-epic text-[10px] md:text-xs tracking-[0.2em] uppercase">Fuiste formado para este momento</p>
+            <p id="genderText" class="text-orange-500 font-epic text-[10px] md:text-xs tracking-[0.2em] uppercase">Fuiste formado para este momento</p>
         </div>
 
-        <!-- Body Text -->
+        <!-- Contenido -->
         <div class="space-y-5 md:space-y-6 text-neutral-300 leading-relaxed text-center md:text-left text-sm md:text-base">
             <p>
                 Tu historia en el <span class="text-white font-bold">Club de Conquistadores Palermo</span> no es casualidad. Durante años, has crecido, superado retos y demostrado que llevas el uniforme con honor.
@@ -90,14 +83,14 @@
             <p>
                 Pero hoy, el horizonte ha cambiado y el <span class="text-orange-400 font-semibold">Ministerio Juvenil</span> ve en ti algo que va más allá de una clase o una pañoleta. 
             </p>
-            <div class="bg-neutral-800/40 p-5 rounded-2xl border-l-4 border-orange">
+            <div class="bg-neutral-800/40 p-5 rounded-2xl border-l-4 border-[#FF6B00]">
                 <p class="italic text-white text-sm md:text-base">
-                    "Hay misiones que solo aquellos con tu experiencia y carácter pueden cumplir. Buscamos a los que están listos para dejar una huella eterna."
+                    "Hay misiones que solo aquellos con tu experiencia y carácter pueden cumplir. Buscamos a los que están listos para dejar una huella eterna en nuestra iglesia."
                 </p>
             </div>
         </div>
 
-        <!-- Logistics Box -->
+        <!-- Información Logística -->
         <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
             <div class="bg-neutral-800/60 p-4 rounded-2xl flex items-center space-x-4 border border-neutral-700/50">
                 <div class="bg-orange/10 p-2.5 rounded-xl text-orange-500">
@@ -119,20 +112,19 @@
             </div>
         </div>
 
-        <!-- Instruction Section -->
+        <!-- Llamado a la acción -->
         <div class="mt-8 text-center space-y-6">
             <div class="inline-block px-4 py-1.5 rounded-full bg-orange/10 border border-orange/20 text-[10px] text-orange-400 uppercase tracking-widest font-bold">
                 Instrucción de Honor
             </div>
             <p class="text-xs md:text-sm text-neutral-400 max-w-xs mx-auto">
-                Las reuniones serán estrictamente individuales. Confírmame ahora y te asignaré tu hora exacta.
+                Las reuniones serán estrictamente individuales. Confírmame ahora y te asignaré tu hora exacta de encuentro.
             </p>
             
-            <p class="text-lg md:text-xl font-epic text-white pt-2">
-                ¿Aceptas el llamado?
+            <p id="callToActionText" class="text-lg md:text-xl font-epic text-white pt-2">
+                ¿Estás listo para el llamado?
             </p>
 
-            <!-- CTA Button -->
             <button onclick="confirmAsistencia()" class="group relative w-full inline-flex items-center justify-center px-6 py-4 font-bold text-white transition-all duration-300 bg-orange rounded-2xl hover:bg-orange-600 focus:outline-none glow active:scale-95">
                 CONFIRMAR MI ASISTENCIA
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -147,12 +139,24 @@
     </main>
 
     <script>
-        // Función para personalizar el nombre
+        // Lógica de personalización dinámica
         window.onload = function() {
             const params = new URLSearchParams(window.location.search);
             const nombre = params.get('nombre');
+            const genero = params.get('genero'); // 'f' para femenino
+
             if (nombre) {
                 document.getElementById('userName').innerText = nombre.toUpperCase();
+            }
+
+            // Si el género es femenino (f), ajustamos los textos
+            if (genero === 'f') {
+                document.getElementById('genderText').innerText = "FUISTE FORMADA PARA ESTE MOMENTO";
+                document.getElementById('callToActionText').innerText = "¿ESTÁS LISTA PARA EL LLAMADO?";
+                // Si no hay nombre, ponemos el genérico femenino
+                if (!nombre) {
+                    document.getElementById('userName').innerText = "CONQUISTADORA";
+                }
             }
         }
 
@@ -160,8 +164,8 @@
             const nombre = document.getElementById('userName').innerText;
             const mensaje = `Hola Director, soy ${nombre}. He recibido el llamado. Confirmo mi asistencia para el 11 de abril. ¿Cuál es mi hora asignada?`;
             
-            // Aquí puedes poner tu número de WhatsApp real para que funcione de una vez
-            const phone = "573000000000"; 
+            // Reemplaza con tu número real de WhatsApp (formato internacional sin el +)
+            const phone = "573001234567"; 
             const url = `https://wa.me/${phone}?text=${encodeURIComponent(mensaje)}`;
             window.open(url, '_blank');
         }
